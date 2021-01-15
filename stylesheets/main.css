@@ -2,28 +2,54 @@ body{
 	background-color: #262626;
 }
 
-#logo{
-	position: sticky;
-	top: 10px;
+#logo-container{
+	width: 476px;
+	height: 532px;
 	margin-top: 200px;
-	width: 25%;
-	height: auto;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
 	animation: slowLogoAnim 15s 0s infinite;
-	transition: margin-top 2s, width 2s;
+	transition: height 2s, width 2s, margin-top 2s;
 }
 
-#logo:hover {
-	width: 20%;
-	margin-top: 220px;
-	transition: margin-top 2s, width 2s;
+#logoButton {
+	width: inherit;
+	height: inherit;
+	background: none;
+	border: none;
+	z-index: -1;
 }
 
-#logo:focus {
+#logo-container:hover {
+	width: 317px;
+	height: 354px;
+	margin-top: 250px;
+	transition: width 2s, height 2s, margin-top 2s;
+}
+
+#logoBottom {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#logoTop {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#logoButton:focus {
 	outline: none;
-	animation: unlockAnim 6s forwards;
 }
 
 h1{

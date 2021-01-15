@@ -7,6 +7,15 @@ function sleep(ms) {
 }
 
 $(document).ready(function(){
+	
+	// For clicking logo anim
+	
+	$("#logoButton").click(function(){
+		console.log("CLICKED");
+		$("#logo-container").animate({deg: 360}, {duration: 2000, step: function(now){
+			$("#logo-container").css({transform: 'rotate('+now+'deg)'});
+		}})
+	});
 
 
 	// Removes our logo after a user clicks on it for the first time
