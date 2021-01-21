@@ -1,23 +1,98 @@
 body{
 	background-color: #262626;
 }
+/*
+#262626 is bg color
+*/
 
 #logo-container{
 	width: 476px;
 	height: 532px;
 	margin-top: 200px;
+	background: none;
+	border: none;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	display: block;
 	animation: slowLogoAnim 15s 0s infinite;
 	transition: height 2s, width 2s, margin-top 2s;
 }
 
-#logoButton {
-	width: inherit;
-	height: inherit;
-	background: none;
+input[type=text] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	outline: none;
 	border: none;
+	background-color: #1c1c1c;
+	color: #dddddd;
+	font: bold 40px Verdana, sans-serif;
+}
+
+form {
+	display: none;
+	margin-top: 900px;
+	position: relative;
+}
+
+input[type=submit] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	position: relative;
+	
+	border-color: #dddddd;
+	border-width: medium;
+	border-radius: 18px;
+	background-color: #1c1c1c;
+	padding: 10px 50px;
+	margin-top: 40px;
+	color: #dddddd;
+	font: bold 40px Verdana, sans-serif;
+	transition: font 0.5s;
+}
+
+input[type=submit]:hover {
+	font: bold 35px Verdana, sans-serif;
+	transition: font 0.5s;
+}
+
+label {
+	display: block;
+	position: relative;
+	margin-bottom: -20px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: #dddddd;
+	font: bold 80px Verdana, sans-serif;
+	
+}
+
+#logo-container:focus {
+	border: none;
+	outline: none;
+	animation: unlockAnim 4s forwards;
+}
+
+#bgTop {
+	position: absolute;
+	height: 100%;
+	width: 110%;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+#bgBot {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
 	z-index: -1;
 }
 
@@ -48,29 +123,14 @@ body{
 	margin-bottom: auto;
 }
 
-#logoButton:focus {
-	outline: none;
-}
-
 h1{
 	font: bold 180px Verdana, sans-serif;
 	width: 100%;
-	margin-top: 200px;
-	margin-left: -1500px;
+	position: absolute;
+	top: 100px;
 	text-align: center;
 	color: 	#D3D3D3;
-	/*text-shadow: 1px 1px 0px black,
-	2px 2px 0px black,
-	3px 3px 0px black,
-	4px 4px 0px black,
-	5px 5px 0px black,
-	6px 6px 0px black,
-	7px 7px 0px black,
-	8px 8px 0px black,
-	9px 9px 0px black,
-	10px 10px 0px black;*/
-
-	display: none;
+	z-index: -2;
 }
 
 #sidebar{
@@ -79,8 +139,7 @@ h1{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index = 1;
-	display: none;
+	z-index: -2;
 }
 
 #top-icon{
@@ -120,9 +179,8 @@ h1{
 }
 
 @keyframes unlockAnim {
-	0% {transform: rotate(0deg);}
-	55% {transform: rotate(360deg);}
-	100% {transform: translateY(-80em)}
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
 }
 
 #discord-icon:hover {
