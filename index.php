@@ -3,7 +3,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="scripts/main.js"></script>
+		<script defer src="scripts/main.js"></script>
+		<script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+		<script defer src="scripts/chat.js"></script>
 	</head>
 	<body>
 		<img alt="bgTop" src="images/BGTop.png" id="bgTop">
@@ -25,6 +27,9 @@
 			$stmnt->execute([$formName, $formAge, $formGrade]);
 		}
 		?>
+
+
+		<h2 class="section-header" id="form-header">FORM</h2>
 		
 		<form action="index.php" method="post">
 			<label for="nameInput">NAME</label><br>
@@ -34,6 +39,16 @@
 			<label for="gradeInput">GRADE</label><br>
 			<input id="gradeInput" type="text" name="grade">
 			<input type="submit" value="SUBMIT">
+		</form>
+
+
+		<h2 class="section-header" id="chat-header">CHAT</h2>
+
+		<div id="chat-container"></div>
+
+		<form id="chat-footer">
+			<input id="text-input" type="text">
+			<input type="submit" id="chat-submit" value="Send">
 		</form>
 	</body>
 </html>

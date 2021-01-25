@@ -1,0 +1,26 @@
+{
+  "name": "NULLWebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon scripts/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NULLtm/NULLWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NULLtm/NULLWebsite/issues"
+  },
+  "homepage": "https://github.com/NULLtm/NULLWebsite#readme",
+  "dependencies": {
+    "socket.io": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

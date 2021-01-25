@@ -55,20 +55,20 @@ $(document).ready(function(){
 	// Removes our logo after a user clicks on it for the first time
 
 	$("#logo-container").on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e){
-		
-		console.log("ANIM ENDED");
 
 		$("#logoTop").animate({top: "-700px", left: "700px"}, 3000, "swing");
 		$("#bgTop").animate({top: "-700px", left: "700px"}, 3000, "swing");
 		$("#bgBot").animate({top: "700px", left: "-700px"}, 3000, "swing");
 		fancyText();
-		$("#logoBottom").animate({top: "700px", left: "-700px"}, 3000, "swing", function(){
+		$("#logoBottom").animate({top: "700px", left: "-700px"}, 3000, "swing", async function(){
 			$("#logo-container").hide();
 			$("#logoTop").hide();
 			$("#logoBottom").hide();
 			$("#bgBot").hide();
 			$("#bgTop").hide();
 			$("form").show();
+			$(".section-header").show();
+			$("#chat-container").show();
 		});
 
 	});
